@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop-Down Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: url('background.jpg');
+            background-size: cover;
+
+            font-family: sans-serif;
+        }
+
+        li {
+            color: azure;
+        }
+
+        .menu-bar {
+            background-color: rgb(2, 22, 55);
+            text-align: center;
+        }
+
+        .menu-bar ul {
+            display: inline-flex;
+            list-style: none;
+        }
+
+        .menu-bar ul li {
+            width: 120px;
+            margin: 15px;
+            padding: 15px;
+        }
+
+        .menu-bar ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .active,
+        .menu-bar ul li:hover {
+            background: rgb(6, 49, 118);
+            border-radius: 3px;
+        }
+
+        .menu-bar .fa {
+            margin: 5px;
+        }
+
+        .sub-menu-1 {
+            display: none;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 {
+            display: block;
+            position: absolute;
+            background: rgb(2, 22, 55);
+            margin: 15px 0 0 -15px;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul {
+            display: block;
+            margin: 10px;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul li {
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+            border-bottom: none;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+            color: rgb(15, 11, 50);
+        }
+
+        .sub-menu-2 {
+            display: none;
+        }
+
+        .hover-me:hover .sub-menu-2 {
+            position: absolute;
+            display: block;
+            margin: -40px 0 0 140px;
+            background: rgb(18, 4, 61);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul >
+            <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fa fa-user"></i>About Us</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="">Mission</a></li>
+                        <li><a href="">Vission</a></li>
+                        <li><a href="">Team</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-clone"></i>Services</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="">Full Car Wash</a></li>
+                        <li class="hover me"><a href="">Other</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="">Premium Polish</a></li>
+                                    <li><a href="">Luxe Wash</a></li>
+                                    <li><a href=""> Exquisite Clean</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">Second Hand Car</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-users"></i>Clients</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="">Cab Driver</a></li>
+                        <li><a href="">Merchants</a></li>
+                        <li><a href="">Car Companies</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-home"></i>Investors</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="">Businessman</a></li>
+                        <li><a href="">startups</a></li>
+                        <li><a href="">anyone</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-angellist"></i>Pricing</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="">Full Wash-2000Rs</a></li>
+                        <li><a href="">other</a></li>
+                        <li><a href="">Car Rent 150Rs for a hour</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-inr"></i>Training</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="">1 month</a></li>
+                        <li><a href="">2 month</a></li>
+                        <li><a href="">3 month</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-phone"></i>Contact</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="">15654644</a></li>
+                        <li><a href="">6516464</a></li>
+                        <li><a href="">561646464</a></li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+</html>
